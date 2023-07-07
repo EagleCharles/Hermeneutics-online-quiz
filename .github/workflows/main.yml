@@ -23,12 +23,12 @@ jobs:
       - name: Build Docker image
         run: |
           docker build -t my-image .
-      
+
       - name: Log into Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v1
 
       - name: Tag and push Docker image to ECR
         run: |
-          docker tag my-image ${{ steps.login-ecr.outputs.registry }}/eagletest:latest
-          docker push ${{ steps.login-ecr.outputs.registry }}/eagletest:latest
+          docker tag my-image ${{ steps.login-ecr.outputs.registry }}/eagletest:latest2
+          docker push ${{ steps.login-ecr.outputs.registry }}/eagletest:latest2
