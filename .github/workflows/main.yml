@@ -3,7 +3,7 @@ name: Docker Build and push
 on:
   push:
     branches:
-      - main
+      - mongo-db-and-eslint-integration
 
 jobs:
   build_and_push:
